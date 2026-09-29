@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101d23" />
+    <meta
+      name="description"
+      content="在雪山与极光之间，认真为自己过一次生日。"
+    />
+    <title>Solo Birthday Room</title>
+  </head>
+  <body>
+    <canvas id="scene"></canvas>
+    <div class="grain"></div>
+    <header>
+      <span class="mark">S / B</span>
+      <div>SOLO BIRTHDAY ROOM<small>A LITTLE SPACE, JUST FOR YOU</small></div>
+      <button id="sound" aria-label="开启环境音">声音 · 关</button>
+    </header>
+    <nav id="scenes" aria-label="选择生日场景">
+      <button data-scene="alpine" aria-pressed="true">雪山极光</button>
+      <button data-scene="ocean" aria-pressed="false">日出海边</button>
+      <button data-scene="manor" aria-pressed="false">欧洲庄园</button>
+    </nav>
+    <span id="scene-status" role="status"></span>
+    <aside class="place">
+      <span>THE LAKESIDE CABIN</span><span>北境湖畔 · 今夜为你亮灯</span>
+    </aside>
+    <main id="copy" aria-live="polite">
+      <div id="chapter">01 — ARRIVAL</div>
+      <h1 id="title">今晚，世界慢一点。</h1>
+      <p id="subtitle">在这里，为自己好好过一次生日。</p>
+      <button id="action">点亮蜡烛 <span>↗</span></button
+      ><button id="alternate" hidden>用烛光完成愿望</button>
+    </main>
+    <div id="gesture" hidden>
+      <span>✧</span>
+      <p id="gesture-text">张开手掌</p>
+    </div>
+    <footer>
+      <span>一人，也是一场值得庆祝的相遇。</span
+      ><span id="phase">抵达 <i></i> 点亮 <i></i> 许愿 <i></i> 庆祝</span>
+    </footer>
+    <video id="video" playsinline muted autoplay aria-hidden="true"></video>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
