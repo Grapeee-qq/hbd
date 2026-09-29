@@ -1,0 +1,256 @@
+#scenes{position:fixed;top:102px;left:42px;display:flex;gap:5px;padding:4px;background:#0c191c55;border:1px solid #ffffff22;backdrop-filter:blur(14px);border-radius:24px}
+#scenes button{font-size:12px;letter-spacing:1px;background:transparent;border:0;border-radius:18px;padding:9px 14px;color:#f4edddd0}
+#scenes button[aria-pressed="true"]{background:#e3cca92b;color:#fff6e2}
+#scenes button:hover{background:#ffffff18}
+#scene-status{position:fixed;left:48px;top:155px;font-size:12px;color:#ffefcf}
+@media(max-width:600px){#scenes{left:22px;top:88px}#scenes button{padding:8px 12px}.place{top:151px!important}#scene-status{top:137px;left:26px}}
+/* Keep a live video element: display:none can stall camera frames in WebKit. */
+#video{position:fixed;bottom:0;right:0;width:2px;height:2px;opacity:.001;pointer-events:none}
+/* System serif keeps the quiet typography available without a font network request. */
+body.finale main {
+  left: 5%;
+  right: 5%;
+  bottom: 9%;
+  max-width: none;
+  text-align: center;
+}
+body.finale h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+body.finale #chapter {
+  display: none;
+}
+body.finale #subtitle {
+  font-family: Georgia, "Songti SC", serif;
+  font-size: 16px;
+  color: #fff0d3;
+}
+#alternate[hidden] {
+  display: none;
+}
+:root {
+  font-family: Arial, "PingFang SC", sans-serif;
+  color: #eee8dc;
+  background: #101d23;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+}
+canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 12, 17, 0.48),
+    transparent 25%,
+    transparent 55%,
+    rgba(5, 11, 15, 0.85)
+  );
+}
+header {
+  position: fixed;
+  top: 34px;
+  left: 42px;
+  right: 42px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.mark {
+  font-family: Georgia, serif;
+  font-size: 27px;
+  letter-spacing: -2px;
+  border-right: 1px solid #ffffff35;
+  padding-right: 20px;
+}
+small {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  margin-top: 8px;
+  color: #c9c8bf8a;
+}
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+#sound {
+  margin-left: auto;
+  border: 1px solid #ffffff30;
+  border-radius: 30px;
+  background: #16272b35;
+  padding: 11px 18px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.place {
+  position: fixed;
+  right: 42px;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #dddaca9c;
+}
+.place span + span {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+main {
+  position: fixed;
+  left: 7%;
+  bottom: 13%;
+  max-width: 80%;
+  transition: opacity 1s;
+}
+#chapter {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #ddbd86;
+  margin-bottom: 18px;
+}
+h1 {
+  font-family: "Noto Serif SC", Georgia, serif;
+  font-weight: 300;
+  font-size: clamp(28px, 3.1vw, 48px);
+  letter-spacing: 4px;
+  margin: 0 0 17px;
+}
+p {
+  font-size: 14px;
+  line-height: 1.9;
+  letter-spacing: 2px;
+  color: #e5ddd1af;
+  margin: 0 0 25px;
+}
+#action {
+  border: 1px solid #e7cda050;
+  border-radius: 2px;
+  padding: 14px 22px;
+  background: #bc986920;
+  backdrop-filter: blur(12px);
+  font-size: 14px;
+  letter-spacing: 2px;
+  transition: background 0.3s;
+}
+#action:hover {
+  background: #bc986940;
+}
+#action span {
+  margin-left: 28px;
+}
+#alternate {
+  display: block;
+  background: none;
+  border: 0;
+  margin-top: 15px;
+  padding: 5px 0;
+  color: #e5ddd19c;
+  font-size: 12px;
+}
+button[hidden],
+#gesture[hidden] {
+  display: none;
+}
+button:focus-visible {
+  outline: 2px solid #efd6ac;
+  outline-offset: 5px;
+}
+footer {
+  position: fixed;
+  bottom: 30px;
+  left: 42px;
+  right: 42px;
+  display: flex;
+  justify-content: space-between;
+  color: #dcdcd184;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+i {
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: #ffffff25;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+#gesture {
+  position: fixed;
+  right: 45px;
+  bottom: 140px;
+  text-align: center;
+  color: #d3e7dd9c;
+}
+#gesture span {
+  font-size: 36px;
+}
+#gesture p {
+  font-size: 12px;
+  margin: 10px 0;
+}
+@media (max-width: 600px) {
+  header {
+    left: 22px;
+    right: 22px;
+    top: 24px;
+    letter-spacing: 1px;
+  }
+  .mark {
+    font-size: 23px;
+  }
+  small {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+  .place {
+    right: 22px;
+    top: 98px;
+  }
+  main {
+    left: 25px;
+    bottom: 15%;
+    max-width: 88%;
+  }
+  h1 {
+    letter-spacing: 2px;
+  }
+  footer {
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+    font-size: 10px;
+  }
+  #phase {
+    display: none;
+  }
+  #gesture {
+    right: 25px;
+    bottom: 95px;
+  }
+  #sound {
+    padding: 9px 10px;
+  }
+}
